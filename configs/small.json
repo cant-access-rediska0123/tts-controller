@@ -1,0 +1,7 @@
+{
+  "hidden_size": 2048,
+  "width": 256,
+  "layers": 3,
+  "heads": 4,
+  "use_hidden": true
+}

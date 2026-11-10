@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tts-controller"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.6",
+    "transformers>=4.53,<6",
+    "huggingface-hub>=0.35,<2",
+    "datasets>=3,<6",
+    "safetensors>=0.4.5",
+]
+
+[project.scripts]
+tts-controller-train = "src.train:main"
+tts-controller-push = "src.hub:main"
+
+[tool.setuptools.packages.find]
+include = ["src"]
